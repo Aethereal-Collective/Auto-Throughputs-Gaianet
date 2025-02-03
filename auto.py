@@ -98,6 +98,7 @@ def thread():
     while True:
         random_message = random.choice(user_messages)
         send_request(random_message)
+        
 print("\033[36m")
 print("""
 ╔═══════════════════════════════════════╗
@@ -127,5 +128,3 @@ for _ in range(number_threads):
 
 for thread in threads:
     thread.join()
-
-print("All requests have been processed.")
