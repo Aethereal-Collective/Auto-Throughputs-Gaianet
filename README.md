@@ -8,7 +8,7 @@ To get started, clone this repository and navigate to the project directory:
 
 ```sh
 git clone https://github.com/Aethereal-Collective/Auto-Throughputs-Gaianet
-cd auto-throughputs-gaianet
+cd Auto-Throughputs-Gaianet
 ```
 
 ## Setup
