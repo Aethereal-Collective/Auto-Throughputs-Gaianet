@@ -1,53 +1,48 @@
-# Auto Throughputs Gaianet
+# Auto-Throughputs-Gaianet
 
-## 🔧 Overview
-Auto Throughputs Gaianet is a Node.js script developed by the Aethereal Team. It automates the processing of chat messages through Gaianet's chat API, handling multiple chat messages at once and outputting the response.
+## Overview
+Auto-Throughputs-Gaianet is a script designed to send automated Throughputs the Gaianet API using multiple threads. It continuously processes user messages and interacts with the API to retrieve responses.
 
-## ⚙️ Features
-- Processes chat messages from a text file
-- Automatically sends requests to the Gaianet API.
-- Waits for 20 seconds between requests.
-- Loops the script continuously until manually stopped.
+## Installation
+To get started, clone this repository and navigate to the project directory:
 
-## 🚀 Installation
+```sh
+git clone https://github.com/Aethereal-Collective/Auto-Throughputs-Gaianet
+cd auto-throughputs-gaianet
+```
 
-### Prerequisites:
-- Node.js (v14 or higher)
-- `cersex.txt` file containing the chat messages you want to process.
+## Setup
+1. **Edit `api.txt`**
+   - Open a terminal and run:
+     ```sh
+     nano api.txt
+     ```
+   - Add the following details:
+     - **First line:** API Key (Obtain from [Gaianet Settings](https://www.gaianet.ai/setting))
+     - **Second line:** API URL (Navigate to [Gaianet Chat](https://www.gaianet.ai/chat?domain) and select your domain)
+   - Click on **API Tutorial** at the bottom of the "Go to Chat" screen.
+   - Copy `/v1/chat/completions`.
+   - Copy the API key and replace it in `api.txt`.
 
-### Steps:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Aethereal-Collective/Auto-Throughputs-Gaianet
+2. **Create a virtual environment & Create screen**
+   ```sh
+   screen -S auto-gaianet
+   python3 -m venv venv
+   source venv/bin/activate
    ```
-2. Create screen
-   ```bash
-   screen -S gaianet-throughputs
+3. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
    ```
-3. Navigate to directory:
-   ```bash
-   cd Auto-Throughputs-Gaianet
-   ```
-4. Install dependencies:
-   ```bash
-   npm install
-   ```
-5. Run the script:
-   ```bash
-   node index.js
-   ```
-Follow the prompts to enter your Node ID.
 
-## 📄 Usage
-Once you run the script, it will process the chats listed in `cersex.txt`. For each chat, the script will:
+## Usage
+Run the script with:
+```sh
+python3 auto-throughputs-gaianet.py
+```
 
-- Send the chat message to the Gaianet API.
-- Log the response from the API.
-- Wait 20 seconds before proceeding to the next chat message.
-- Loop indefinitely until you manually stop the process.
+You will be prompted to specify the number of threads to use. The script will then begin processing requests automatically.
 
-## 🤝Support
-Stay connected and be part of our community:
+## License
+This project is open-source and available under the MIT License.
 
-- [Join our Discord](https://discord.gg/aethereal)  
-- [Follow us on Twitter](https://x.com/aethereal_co)
