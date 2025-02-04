@@ -94,7 +94,7 @@ def send_request(message):
             print(f"Request failed with error: {e}. Retrying...")
             time.sleep(5)
 
-def thread():
+def start_thread():
     while True:
         random_message = random.choice(user_messages)
         send_request(random_message)
@@ -122,7 +122,7 @@ except ValueError:
 threads = []
 
 for _ in range(number_threads):
-    thread = threading.Thread(target=thread)
+    thread = threading.Thread(target=start_thread)
     threads.append(thread)
     thread.start()
 
