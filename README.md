@@ -38,7 +38,7 @@ cd Auto-Throughputs-Gaianet
 ## Usage
 Run the script with:
 ```sh
-python3 auto-throughputs-gaianet.py
+python3 auto.py
 ```
 
 You will be prompted to specify the number of threads to use. The script will then begin processing requests automatically.
